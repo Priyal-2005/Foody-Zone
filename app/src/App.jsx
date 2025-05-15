@@ -4,7 +4,7 @@ const App = () => {
 
   return (
     <>
-      <MainContainer>
+      <Container>
         <TopContainer>
           <div className="logo">
             <img src="/logo.svg" alt="logo" />
@@ -14,12 +14,40 @@ const App = () => {
             <input placeholder="Search Food" />
           </div>
         </TopContainer>
-      </MainContainer>
+
+        <FilterContainer>
+
+        </FilterContainer>
+      </Container>
     </>
   );
 };
 
 export default App;
 
-const MainContainer = styled.div``;
-const TopContainer = styled.section``;
+const Container = styled.div`
+  max-width: 1200px;
+  margin: 0 auto;
+`;
+const TopContainer = styled.section`
+  min-height: 140px;
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+  align-items: center;
+
+  .search {
+    input {
+      background-color: transparent;
+      border: 1px solid red;
+      color: white;
+      border-radius: 5px;
+      height: 40px;
+      font-size: 16px;
+      outline: none;
+      padding: 0 10px;
+    }
+  }
+`;
+
+const FilterContainer = styled.section``;
