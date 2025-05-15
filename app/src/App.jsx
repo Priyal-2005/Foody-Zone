@@ -16,8 +16,15 @@ const App = () => {
         </TopContainer>
 
         <FilterContainer>
-          <Button></Button>
+          <Button>All</Button>
+          <Button>Breakfast</Button>
+          <Button>Lunch</Button>
+          <Button>Dinner</Button>
         </FilterContainer>
+
+        <FoodCardContainer>
+          <FoodCards></FoodCards>
+        </FoodCardContainer>
       </div>
     </>
   );
@@ -46,6 +53,25 @@ const TopContainer = styled.section`
   }
 `;
 
-const FilterContainer = styled.section``;
+const FilterContainer = styled.section`
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  padding-bottom: 40px;
+`;
 
-const Button = styled.button``;
+const Button = styled.button`
+  background: #ff4343;
+  border-radius: 5px;
+  padding: 6px 12px;
+  color: white;
+  border: none;
+`;
+
+const FoodCardContainer = styled.section`
+  height: calc(100vh - 170px);
+  background-image: url("/bg.png");
+  background-size: cover;
+`;
+
+const FoodCards = styled.div``;
