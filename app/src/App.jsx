@@ -4,7 +4,7 @@ const App = () => {
 
   return (
     <>
-      <Container>
+      <div style={{maxWidth: "1200px", margin: "0 auto"}}>
         <TopContainer>
           <div className="logo">
             <img src="/logo.svg" alt="logo" />
@@ -16,19 +16,15 @@ const App = () => {
         </TopContainer>
 
         <FilterContainer>
-
+          <Button></Button>
         </FilterContainer>
-      </Container>
+      </div>
     </>
   );
 };
 
 export default App;
 
-const Container = styled.div`
-  max-width: 1200px;
-  margin: 0 auto;
-`;
 const TopContainer = styled.section`
   min-height: 140px;
   display: flex;
@@ -51,3 +47,5 @@ const TopContainer = styled.section`
 `;
 
 const FilterContainer = styled.section``;
+
+const Button = styled.button``;
