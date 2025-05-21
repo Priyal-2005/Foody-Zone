@@ -1,10 +1,15 @@
+import { useState } from "react";
 import styled from "styled-components"
+
+const BASE_URL = "http://localhost:9000";
 
 const App = () => {
 
+  const [data, setData] = useState(null);
+
   return (
     <>
-      <div style={{maxWidth: "1200px", margin: "0 auto"}}>
+      <Container>
         <TopContainer>
           <div className="logo">
             <img src="/logo.svg" alt="logo" />
@@ -25,12 +30,17 @@ const App = () => {
         <FoodCardContainer>
           <FoodCards></FoodCards>
         </FoodCardContainer>
-      </div>
+      </Container>
     </>
   );
 };
 
 export default App;
+
+const Container = styled.div`
+  max-width: 1200px
+  margin: 0 auto
+`
 
 const TopContainer = styled.section`
   min-height: 140px;
@@ -69,9 +79,11 @@ const Button = styled.button`
 `;
 
 const FoodCardContainer = styled.section`
-  height: calc(100vh - 170px);
+  height: calc(100vh - 210px);
   background-image: url("/bg.png");
   background-size: cover;
 `;
 
-const FoodCards = styled.div``;
+const FoodCards = styled.div`
+
+`;
